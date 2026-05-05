@@ -1,0 +1,15 @@
+{% block subject %}
+Welcome to our platform
+{% endblock %}
+
+{% block plain %}
+Hello,
+
+Thank you for joining us.  {{ name }}
+{% endblock %}
+
+{% block html %}
+<h1>Hello,</h1>
+<p>Thank you for joining us.  {{ name }}</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUT2jLYoIC9Lg65AVA5KhEUdJdWFm0-vznZg&s" alt="">
+{% endblock %}
