@@ -1,4 +1,4 @@
-version: "4.6"
+version: '4.6'
 
 services:
   backend:
@@ -8,6 +8,4 @@ services:
     volumes:
       - ./core:/app
     ports:
-    - "8000:8000"
-    # enviroment:
-    #   - name-value
+      - "8000:8000"
