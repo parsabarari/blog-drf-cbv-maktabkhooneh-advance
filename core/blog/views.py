@@ -7,6 +7,7 @@ from django.views.generic import (
     CreateView,
     UpdateView,
 )
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post
 
 # Create your views here.
@@ -28,7 +29,7 @@ class PostCreateView(CreateView):
     success_url = "/blog/post/"
 
 
-class PostDetailView(DetailView):
+class PostDetailView(LoginRequiredMixin,DetailView):
     model = Post
 
     def get_context_data(self, **kwargs):
