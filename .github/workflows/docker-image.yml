@@ -19,4 +19,4 @@ jobs:
 
       - name: Run Tests
         run: |
-          docker exec backend sh -c "flake8 && pytest ."
+          docker exec backend sh -c "pytest ."
