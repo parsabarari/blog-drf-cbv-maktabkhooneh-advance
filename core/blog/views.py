@@ -6,6 +6,7 @@ from django.views.generic import (
     DetailView,
     CreateView,
     UpdateView,
+    TemplateView,
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post
@@ -21,6 +22,11 @@ class PostListView(ListView):
         context = super().get_context_data(**kwargs)
         context["name"] = "parsa"
         return context
+
+
+class PostListApiView(ListView):
+    model = Post
+    template_name = 'blog/post_list_api.html'
 
 
 class PostCreateView(CreateView):
