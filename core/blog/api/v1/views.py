@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from .serializers import PostSerializer, CategorySerializer
 from ...models import Post, Category
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from .permissions import IsOwnerOrReadOnly
@@ -46,6 +46,6 @@ class PostViewset(viewsets.ModelViewSet):
 
 
 class CategoryViewset(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticated]
     serializer_class = CategorySerializer
     queryset = Category.objects.all()
