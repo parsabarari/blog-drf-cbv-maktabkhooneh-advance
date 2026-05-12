@@ -161,5 +161,16 @@ TEMPLATED_EMAIL_DEFAULT_FROM_EMAIL = "no-reply@example.com"
 LOGIN_URL = "/admin/login/"
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5500/",
+    "http://127.0.0.1:5500",
 ]
+
+
+# celery configs
+CELERY_BROKER_URL = 'redis://redis:6379/1'
+
+# CELERY_BEAT_SCHEDULE = {
+#     'send_email': {
+#         'task':'accounts.tasks.sendEmail',
+#         'schedule':5
+#     }
+# }
