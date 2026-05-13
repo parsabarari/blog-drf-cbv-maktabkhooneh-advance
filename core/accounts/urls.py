@@ -6,5 +6,6 @@ urlpatterns = [
     path("api/v1/", include("accounts.api.v1.urls")),
     path("api/v2/", include("djoser.urls")),
     path("api/v2/", include("djoser.urls.jwt")),
-    path("sendemail", views.send_email, name='send-email'),
+    path("sendemail/", views.send_email, name='send-email'),
+    path("cache-test/", views.cache_test, name='cache-test'),
 ]
